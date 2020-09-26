@@ -1,0 +1,13 @@
+body {
+    background: radial-gradient(circle, rgba(255,193,116,1) 0%, rgba(251,168,103,1) 25%, rgba(249,140,102,1) 50%, rgba(250,105,94,1) 75%, rgba(249,103,77,1) 100%);
+}
+
+.chatroom {
+    background: white;
+    border-radius: 1em;
+    height: 80%;
+}
+
+.cornellchat {
+    color: white;
+}

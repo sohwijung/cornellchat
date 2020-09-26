@@ -2,9 +2,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
     <title>Cornell Chat</title>
 </head>
 <body>
+    <div class="container">
+        <h1 class="cornellchat text-center my-4">Cornell Chat</h1>
+
+        <div class="chatroom">
+        <h3 class="pt-4 pb-1 ml-4">Choose a chatroom:</h3>
+        <button class="btn btn-light ml-3" id="class">#class</button>
+        <button class="btn btn-light ml-2" id="social">#social</button>
+        <button class="btn btn-light ml-2" id="mental_health">#mental_health</button>
+        <button class="btn btn-light ml-2" id="snow">#snow</button>
+
+        <h5 class="pt-3 pb-1 ml-4">Don't see any you like? Make your own!</h5>
+        <form class="new-chat ml-3 my-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Chatroom name:</div>
+                </div>
+
+                <div class = "col-xs-3">
+                    <input type="text" id="message" class="form-control" required>
+                </div>
+
+                <div class="input-group-append">
+                    <input type="submit" class="btn btn-dark" value="Create">
+                </div>
+            </div>
+        </form>
+
+
+        <div class="chat-window">
+            <ul class="chat-list list-group"></ul>
+        </div>
+
+        </div>
+
+
+    </div>
     
 </body>
 </html>
