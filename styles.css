@@ -11,3 +11,7 @@ body {
 .cornellchat {
     color: white;
 }
+
+.username{
+    font-weight: bold;
+}
