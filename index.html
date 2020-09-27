@@ -7,42 +7,110 @@
     <title>Cornell Chat</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container text-center">
         <h1 class="cornellchat text-center my-4">Cornell Chat</h1>
 
-        <div class="chatroom">
+        <div class="content-container">
+
         <h3 class="pt-4 pb-1 ml-4">Choose a chatroom:</h3>
-        <button class="btn btn-light ml-3" id="class">#class</button>
-        <button class="btn btn-light ml-2" id="social">#social</button>
-        <button class="btn btn-light ml-2" id="mental_health">#mental_health</button>
-        <button class="btn btn-light ml-2" id="snow">#snow</button>
+        <div class="chatrooms justify-content-center">
+            <button class="btn btn-light ml-3" id="class">#class</button>
+            <button class="btn btn-light ml-2" id="social">#social</button>
+            <button class="btn btn-light ml-2" id="mental_health">#mental_health</button>
+            <button class="btn btn-light ml-2" id="snow">#snow</button>
+        </div>
 
         <h5 class="pt-3 pb-1 ml-4">Don't see any you like? Make your own!</h5>
-        <form class="new-chat ml-3 my-3">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">Chatroom name:</div>
-                </div>
+        <form class="new-chat-room ml-3 my-3">
+            <div class="justify-content-center">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">Chatroom:</div>
+                        </div>
 
-                <div class = "col-xs-3">
-                    <input type="text" id="message" class="form-control" required>
-                </div>
+                        <div class = "col-xs-3">
+                            <input type="text" id="message" class="form-control" required>
+                        </div>
 
-                <div class="input-group-append">
-                    <input type="submit" class="btn btn-dark" value="Create">
+                    <div class="input-group-append">
+                        <input type="submit" class="btn btn-dark" value="Create">
+                    </div>
+                    </div>
                 </div>
-            </div>
         </form>
-
 
         <div class="chat-window">
             <ul class="chat-list list-group"></ul>
+        </div>
+
+        <form class="new-chat ml-3 my-3">
+            <div class="justify-content-center">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">Message:</div>
+                        </div>
+
+                        <div class = "col-xs-3">
+                            <input type="text" id="message" class="form-control" required>
+                        </div>
+
+                    <div class="input-group-append">
+                        <input type="submit" class="btn btn-dark" value="Send">
+                    </div>
+                    </div>
+                </div>
+        </form>
+
+        <form class="new-name ml-3 my-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">Name:</div>
+              </div>
+            <div class = "col-xs-3">
+                <input type="text" id="name" class="form-control" required>
+            </div>              
+                <div class="input-group-append">
+                    <input type="submit" class="btn btn-dark" value="Update">
+                </div>
+            </div>
+            <div class="update-mssg text-center my-2"></div>
+        </form>
+
+
         </div>
 
         </div>
 
 
     </div>
-    
+
+
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+
+    <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyBjHuozoKMmHncwMMhwSxaG0XeP234gb9Q",
+        authDomain: "cornell-cha.firebaseapp.com",
+        databaseURL: "https://cornell-cha.firebaseio.com",
+        projectId: "cornell-cha",
+        storageBucket: "cornell-cha.appspot.com",
+        messagingSenderId: "446946645698",
+        appId: "1:446946645698:web:b9f060014005724c4bcd5b",
+        measurementId: "G-CYMTER1Y07"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore();
+    </script>
+
+
+    <script src="scripts/chat.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/app.js"></script>
+
 </body>
 </html>
