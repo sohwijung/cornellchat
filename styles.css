@@ -15,3 +15,10 @@ body {
 .username{
     font-weight: bold;
 }
+
+.input-group{
+    padding-left: 30%;
+}
+.overflow-scroll{
+    overflow-y: scroll;
+}
