@@ -9,6 +9,9 @@ const updateMssg = document.querySelector('.update-mssg');
 const roomByClass = document.getElementsByClassName('chatrooms');
 const roomButtons = roomByClass[0].getElementsByTagName('button');
 
+
+
+
 rooms.addEventListener("click", function(e) {
   for (let button of roomButtons) {
     if (button.classList.contains("active")) {
