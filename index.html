@@ -8,11 +8,11 @@
 </head>
 <body>
     <div class="container text-center">
-        <h1 class="cornellchat text-center my-4">Cornell Chat</h1>
+        <h1 class="cornellchat text-center my-3">Cornell Chat</h1>
 
         <div class="content-container" >
 
-        <h3 class="pt-4 pb-1 ml-4">Choose a chatroom:</h3>
+        <h5 class="pt-3 pb-1 ml-4">Choose a chatroom:</h3>
         <div class="chatrooms justify-content-center" id="chatrooms">
             <button class="btn btn-light ml-3" id="class">#class</button>
             <button class="btn btn-light ml-2" id="social">#social</button>
@@ -20,7 +20,7 @@
             <button class="btn btn-light ml-2" id="snow">#snow</button>
         </div>
 
-        <h5 class="pt-3 pb-1">Don't see any you like? Make your own!</h5>
+        <!-- <h5 class="pt-3 pb-1">Don't see any you like? Make your own!</h5> -->
         <form class="new-chat-room my-3">
             <div class="justify-content-center">
             <div class="input-group col-log-4">
@@ -39,9 +39,12 @@
                 </div>
         </form>
 
-        <div class="chat-window overflow-scroll">
+
+    <div class="overflow-scroll">
+        <div class="chat-window">
             <ul class="chat-list list-group"></ul>
         </div>
+    </div>
 
     <div class="rightAlign">
         <form class="new-name my-3">
