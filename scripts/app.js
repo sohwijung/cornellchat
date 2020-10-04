@@ -6,9 +6,21 @@ const chatList = document.querySelector('.chat-list');
 const newChatForm = document.querySelector('.new-chat');
 const newNameForm = document.querySelector('.new-name');
 const updateMssg = document.querySelector('.update-mssg');
+const roomByClass = document.getElementsByClassName('chatrooms');
+const roomButtons = roomByClass[0].getElementsByTagName('button');
 
 rooms.addEventListener("click", function(e) {
-  e.target.classList.toggle("active")
+  for (let button of roomButtons) {
+    if (button.classList.contains("active")) {
+      if (button.id != e.target.id) {
+        button.classList.remove("active");
+        e.target.classList.add("active");
+      } 
+    }
+    else {
+      e.target.classList.add("active");
+    };
+  }
 })
 
 newRoomForm.addEventListener('submit', e => {
@@ -36,13 +48,13 @@ newNameForm.addEventListener('submit', e => {
 });
 
 // update the chat room
-// rooms.addEventListener('click', e => {
-//   if(e.target.tagName === 'BUTTON'){
-//     chatUI.clear();
-//     chatroom.updateRoom(e.target.getAttribute('id'));
-//     chatroom.getChats(chat => chatUI.render(chat));
-//   }
-// });
+rooms.addEventListener('click', e => {
+  if(e.target.tagName === 'BUTTON'){
+    chatUI.clear();
+    chatroom.updateRoom(e.target.getAttribute('id'));
+    chatroom.getChats(chat => chatUI.render(chat));
+  }
+});
 
 // check local storage for name
 const username = localStorage.username ? localStorage.username : 'anon';

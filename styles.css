@@ -17,8 +17,9 @@ body {
 }
 
 .input-group{
-    padding-left: 30%;
+    padding-left: 35%;
 }
+
 .overflow-scroll{
     overflow-y: scroll;
 }
