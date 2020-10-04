@@ -8,22 +8,22 @@
 </head>
 <body>
     <div class="container text-center">
-        <h1 class="cornellchat text-center my-4">Cornell Chat</h1>
+        <h1 class="cornellchat text-center my-3">Cornell Chat</h1>
 
         <div class="content-container" >
 
-        <h3 class="pt-4 pb-1 ml-4">Choose a chatroom:</h3>
-        <div class="chatrooms justify-content-center">
+        <h5 class="pt-3 pb-1 ml-4">Choose a chatroom:</h3>
+        <div class="chatrooms justify-content-center" id="chatrooms">
             <button class="btn btn-light ml-3" id="class">#class</button>
             <button class="btn btn-light ml-2" id="social">#social</button>
             <button class="btn btn-light ml-2" id="mental_health">#mental_health</button>
             <button class="btn btn-light ml-2" id="snow">#snow</button>
         </div>
 
-        <h5 class="pt-3 pb-1 ml-4">Don't see any you like? Make your own!</h5>
-        <form class="new-chat-room ml-3 my-3">
+        <!-- <h5 class="pt-3 pb-1">Don't see any you like? Make your own!</h5> -->
+        <form class="new-chat-room my-3">
             <div class="justify-content-center">
-                    <div class="input-group">
+            <div class="input-group col-log-4">
                         <div class="input-group-prepend">
                             <div class="input-group-text">Chatroom:</div>
                         </div>
@@ -32,19 +32,27 @@
                             <input type="text" id="message" class="form-control" required>
                         </div>
 
-                    <div class="input-group-append">
-                        <input type="submit" class="btn btn-dark" value="Create">
-                    </div>
+                        <div class="input-group-append">
+                            <input type="submit" class="btn btn-dark" value="Create">
+                        </div>
                     </div>
                 </div>
         </form>
 
-        <div class="chat-window overflow-scroll">
+
+    <div class="overflow-scroll">
+        <div class="chat-window">
             <ul class="chat-list list-group"></ul>
         </div>
+    </div>
 
+<<<<<<< HEAD
         <div class = "message">
         <form class="new-name ml-3 my-3" justify-content-center>
+=======
+    <div class="rightAlign">
+        <form class="new-name my-3">
+>>>>>>> 37062a36caf5f44f9ff4b3edbb91f624391cfbc9
             <div class="input-group">
               <div class="input-group-prepend">
                 <div class="input-group-text">Name:</div>
@@ -58,6 +66,7 @@
             </div>
             <div class="update-mssg text-center my-2"></div>
         </form>
+<<<<<<< HEAD
        
         <form class="new-chat ml-3 my-3" justify-content-center>
            
@@ -79,6 +88,24 @@
         </div>
 
        
+=======
+
+        <form class="new-chat my-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Message:</div>
+                </div>
+                <div class="col-xs-3">
+                    <input type="text" id="message" class="form-control" required>
+                </div>
+            <div class="input-group-append">
+                <input type="submit" class="btn btn-dark" value="Send">
+            </div>
+            </div>
+        </form>
+    </div>
+    </div>
+>>>>>>> 37062a36caf5f44f9ff4b3edbb91f624391cfbc9
 
 
         </div>
