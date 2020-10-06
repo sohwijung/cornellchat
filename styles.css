@@ -25,4 +25,5 @@ body {
     height: 24em;
     width: 32em;
     margin: 0 auto;
+    overflow-y: scroll;
 }

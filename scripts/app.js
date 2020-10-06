@@ -8,6 +8,7 @@ const newNameForm = document.querySelector('.new-name');
 const updateMssg = document.querySelector('.update-mssg');
 const roomByClass = document.getElementsByClassName('chatrooms');
 const roomButtons = roomByClass[0].getElementsByTagName('button');
+var objDiv = document.getElementsByClassName("chat-window");
 
 rooms.addEventListener("click", function(e) {
   for (let button of roomButtons) {
@@ -30,6 +31,10 @@ newRoomForm.addEventListener('submit', e => {
 });
 
 // add a new chat
+newChatForm.addEventListener('submit', e => {
+  objDiv.scrollIntoView(false);
+});
+
 newChatForm.addEventListener('submit', e => {
   e.preventDefault();
   const message = newChatForm.message.value.trim();
