@@ -17,7 +17,7 @@ body {
 }
 
 .input-group{
-    padding-left: 10%;
+    padding-left: 30%;
 }
 
 .overflow-scroll{
@@ -29,11 +29,5 @@ body {
  
 }
 
-.box{
-    display: inline-flex;
-    flex-direction: row;
-}
 
-.rightAlign{
-    width: 60%;
-}
+
