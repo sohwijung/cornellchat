@@ -15,7 +15,7 @@
     <div class="container text-center">
         <h1 class="cornellchat text-center my-3">Cornell Chat</h1>
 
-        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+        <div class="login"><div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div></div>
         <script>
         function onSignIn(googleUser) {
             // Useful data for your client-side scripts:
@@ -30,6 +30,9 @@
             // The ID token you need to pass to your backend:
             var id_token = googleUser.getAuthResponse().id_token;
             console.log("ID Token: " + id_token);
+
+            $('#login').show();
+            $('#loggedin').show();
         }
         </script>
 
@@ -43,48 +46,46 @@
             <button class="btn btn-light ml-2" id="snow">#snow</button>
         </div>
 
-        <!-- <h5 class="pt-3 pb-1">Don't see any you like? Make your own!</h5> -->
+    <div class="loggedin">
         <form class="new-chat-room my-3">
             <div class="justify-content-center">
             <div class="input-group col-log-4">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">Chatroom:</div>
-                        </div>
-
-                        <div class = "col-xs-3" >
-                            <input type="text" id="message" class="form-control" required>
-                        </div>
-
-                        <div class="input-group-append">
-                            <input type="submit" class="btn btn-dark" value="Create">
-                        </div>
-                    </div>
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Chatroom:</div>
                 </div>
-        </form>
 
-    
-            <div class="overflow-scroll" >
-                <div class="chat-window">
+                <div class = "col-xs-3" >
+                    <input type="text" id="message" class="form-control" required>
+                </div>
 
-                    <ul class="chat-list list-group"></ul>
+                <div class="input-group-append">
+                    <input type="submit" class="btn btn-dark" value="Create">
                 </div>
             </div>
+            </div>
+        </form>
+
+        <div class="overflow-scroll" >
+            <div class="chat-window">
+                <ul class="chat-list list-group"></ul>
+            </div>
+        </div>
+
 
             <div class="rightAlign">
                 <form class="new-name my-3">
-
-                    <div class="input-group">
+                <div class="input-group">
                     <div class="input-group-prepend">
                         <div class="input-group-text">Name:</div>
                     </div>
                     <div class = "col-xs-3">
                         <input type="text" id="name" class="form-control" required>
                     </div>              
-                        <div class="input-group-append">
-                            <input type="submit" class="btn btn-dark" value="Update">
-                        </div>
+                    <div class="input-group-append">
+                        <input type="submit" class="btn btn-dark" value="Update">
                     </div>
-                    <div class="update-mssg text-center my-2"></div>
+                </div>
+                <div class="update-mssg text-center my-2"></div>
                 </form>
 
 
@@ -102,10 +103,9 @@
                     </div>
                 </form>
             </div>
-            </div>
 
-
-
+        </div>
+        </div>
         </div>
 
 
