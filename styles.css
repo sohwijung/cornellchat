@@ -17,13 +17,23 @@ body {
 }
 
 .input-group{
-    padding-left: 35%;
+    padding-left: 10%;
 }
 
 .overflow-scroll{
-    overflow: auto;
+
+    overflow: scroll;
     height: 24em;
     width: 32em;
     margin: 0 auto;
-    overflow-y: scroll;
+ 
+}
+
+.box{
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.rightAlign{
+    width: 60%;
 }

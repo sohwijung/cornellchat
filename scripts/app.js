@@ -10,6 +10,9 @@ const roomByClass = document.getElementsByClassName('chatrooms');
 const roomButtons = roomByClass[0].getElementsByTagName('button');
 var objDiv = document.getElementsByClassName("chat-window");
 
+
+
+
 rooms.addEventListener("click", function(e) {
   for (let button of roomButtons) {
     if (button.classList.contains("active")) {
